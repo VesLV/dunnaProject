@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DUNNA{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="search col-lg-3" style="background-color: rgba(51,51,103,0.77)">
+                <h3>MEKLĒT</h3>
+                <div class="input-group form-margin-bottom">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-search-location"></i></span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="Atrašanās vieta">
+                </div>
+                <div class="input-group form-margin-bottom">
+                    <select class="form-control">
+                        <option hidden>Īpašuma veids</option>
+                        <option>Dzīvoklis</option>
+                        <option>Komerctelpas</option>
+                        <option>Māja</option>
+                        <option>Zeme</option>
+                    </select>
+                </div>
+                <div class="input-group form-margin-bottom">
+                    <select class="form-control">
+                        <option hidden>Darījuma veids</option>
+                        <option>Izīrē</option>
+                        <option>Iznomē</option>
+                        <option>Pārdod</option>
+                    </select>
+                </div>
+                <div class="input-group form-margin-bottom">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text"><i class="fas fa-euro-sign"></i></span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="No">
+                    <input type="number" class="form-control" placeholder="Līdz">
+                </div>
+                <div class="input-group form-margin-bottom">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Platība</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="No">
+                    <input type="number" class="form-control" placeholder="Līdz">
+                </div>
+                <div class="input-group form-margin-bottom">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text">Stāvs</span>
+                    </div>
+                    <input type="number" class="form-control" placeholder="No">
+                    <input type="number" class="form-control" placeholder="Līdz">
+                </div>
+                <button class="btn btn-dark form-margin-bottom" type="submit">Meklēt</button>
+            </div>
+            <div class="col-lg-9">
+                <div class="row ">
+                    {% for property in estates %}
+                        <div class="col-xl-4 col-lg-6 property_col">
+                            <div class="property">
+                                <div class="property_image">
+                                    <img src="{{ asset('build/images/estate.jpg') }}" alt="">
+                                    <div class="tag_featured property_tag"><a href="#">{{ property.property_type }}</a></div>
+                                </div>
+                                <div class="property_body text-center">
+                                    <div class="property_location">{{ property.city }}, {{ property.city_area }}</div>
+                                    <div class="property_title"><a href="#">{{ property.street_name }} {{ property.street_number }}</a></div>
+                                    <div class="property_price">{{ property.price|number_format(0,' ', ' ') }} <i class="fas fa-euro-sign"></i></div>
+                                </div>
+                                <div class="property_footer d-flex flex-row align-items-center justify-content-start">
+                                    <div>
+                                        <div class="property_icon"><i class="fas fa-door-open"></i></div>
+                                        <span>{{ property.rooms }}</span></div>
+                                    <div>
+                                        <div class="property_icon"><i class="fas fa-vector-square"></i></div>
+                                        <span>{{ property.area }}</span></div>
+                                    <div>
+                                        <div class="property_icon"><i class="fas fa-sort-amount-up"></i></div>
+                                        <span>1/{{ property.floor }}</span></div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

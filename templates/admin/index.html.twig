@@ -1,0 +1,69 @@
+{% extends 'adminBase.html.twig' %}
+
+
+{% block body %}
+    <div class="container">
+        <div class="card">
+            <div class="card-header">
+                <h1>Jauns īpašums</h1>
+            </div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label>Pilsēta</label>
+                        <input type="text" class="form-control" id="city">
+                    </div>
+                    <div class="form-group">
+                        <label>Rajons</label>
+                        <input type="text" class="form-control" id="city_area">
+                    </div>
+                    <div class="form-group">
+                        <label>Iela</label>
+                        <input type="text" class="form-control" id="street">
+                    </div>
+                    <div class="form-group">
+                        <label>Mājas numurs</label>
+                        <input type="number" class="form-control" id="street_number">
+                    </div>
+                    <div class="form-group">
+                        <label>Google kartes īpašuma koordinātes</label>
+                        <input type="text" class="form-control" id="google_coordinates">
+                    </div>
+                    <div class="form-group">
+                        <label>Īpašuma veids</label>
+                        <input type="text" class="form-control" id="property_type">
+                    </div>
+                    <div class="form-group">
+                        <label>Cena</label>
+                        <input type="number" class="form-control" id="price">
+                    </div>
+                    <div class="form-group">
+                        <label>Platība</label>
+                        <input type="number" class="form-control" id="area">
+                    </div>
+                    <div class="form-group">
+                        <label>Istabu skaits</label>
+                        <input type="number" class="form-control" id="rooms">
+                    </div>
+                    <div class="form-group">
+                        <label>Stāvs</label>
+                        <input type="number" class="form-control" id="floor">
+                    </div>
+                    <div class="form-group">
+                        <label>Darijuma veids</label>
+                        <input type="text" class="form-control" id="deal_type">
+                    </div>
+                    <div class="form-group">
+                        <label>Apraksts</label>
+                        <textarea class="form-control" id="description" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Attēli</label>
+                        <input type="file" name="img" id="img" multiple>
+                    </div>
+                    <button class="btn btn-primary mb-2 submit">Pievienot īpašumu</button>
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
