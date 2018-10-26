@@ -22,39 +22,37 @@ require('bootstrap-slider');
 global.$ = global.jQuery = $;
 
 
-$(function () {
-    $('.submit').click(function (e) {
-        e.preventDefault();
-        var base_url = window.location.origin;
+function getExtension(filename) {
+    var parts = filename.split('.');
+    return parts[parts.length - 1];
+}
 
-        city = $("#city").val();
-        city_area = $("#city_area").val();
-        street = $("#street").val();
-        street_number = $("#street_number").val();
-        google_coordinates = $("#google_coordinates").val();
-        property_type = $("#property_type").val();
-        price = $("#price").val();
-        area = $("#area").val();
-        rooms = $("#rooms").val();
-        floor = $("#floor").val();
-        deal_type = $("#deal_type").val();
-        description = $("#description").val();
-        images = $("#img").val();
+function isImage(filename) {
+    var ext = getExtension(filename);
+    switch (ext.toLowerCase()) {
+        case 'jpg':
+        case 'jpeg':
+        case 'png':
+            return true;
+    }
+    return false;
+}
 
-        $.post(base_url + '/admin/save', {
-            city: city,
-            city_area: city_area,
-            street: street,
-            street_number: street_number,
-            google_coordinates: google_coordinates,
-            property_type: property_type,
-            price: price,
-            area: area,
-            rooms: rooms,
-            floor: floor,
-            deal_type: deal_type,
-            description: description,
-            images: images,
-        });
+$(function() {
+    $('form').submit(function() {
+        function failValidation(msg) {
+            alert(msg); // just an alert for now but you can spice this up later
+            return false;
+        }
+
+        var images = $('#images');
+        if (!isImage(images.val())) {
+            return failValidation('Lohs esi?! Davaj normalu formatu izvelies! (jpg, jpeg, png)');
+        }
+
+        // success at this point
+        // indicate success with alert for now
+        alert('Valid file! Here is where you would return true to allow the form to submit normally.');
+        return false; // prevent form submitting anyway - remove this in your environment
     });
 });

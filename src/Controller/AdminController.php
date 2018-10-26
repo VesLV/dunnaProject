@@ -2,13 +2,18 @@
 
 namespace App\Controller;
 
+use App\Components\ImageUploadHandle;
 use App\Entity\CityArea;
 use App\Entity\Citys;
 use App\Entity\DealType;
 use App\Entity\DunnaEstates;
+use App\Entity\Images;
 use App\Entity\PropertyType;
 use App\Entity\Streets;
+use mysql_xdevapi\Exception;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\File\Exception\FileException;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
@@ -63,6 +68,9 @@ class AdminController extends AbstractController
         $estates->setDescription($propertyDetails['description']);
         $em->persist($estates);
         $em->flush();
+
+        $this->uploadImages($request->files->get('images'), $estates->getId());
+
         dump('YES');
         exit();
         return new JsonResponse('Success', true);
@@ -134,4 +142,37 @@ class AdminController extends AbstractController
         return $dealTypeEntity->getId();
     }
 
+    public function uploadImages($images, $estateId)
+    {
+        if (count($images) > 1) {
+            foreach($images as $image){
+                $this->upload($image, $estateId);
+            }
+        }
+        $this->upload($images[0], $estateId);
+    }
+
+    /**
+     * @param UploadedFile $image
+     */
+    public function upload(UploadedFile $image, $estateId)
+    {
+        $em =  $this->getDoctrine()->getManager();
+        $imageName = md5(uniqid()) . '.' . $image->guessExtension();
+        try {
+            $image->move(
+                $this->getParameter('images_directory'),
+                $imageName
+            );
+        } catch (FileException $e) {
+            throw new Exception($e->getMessage());
+        }
+        $imageEntity = new Images();
+        $imageEntity->setEstateKey($estateId);
+        $imageEntity->setImageName($imageName);
+//        $imageEntity->setOrderNumber();
+        $em->persist($imageEntity);
+        $em->flush();
+
+    }
 }

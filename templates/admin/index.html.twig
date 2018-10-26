@@ -8,62 +8,80 @@
                 <h1>Jauns īpašums</h1>
             </div>
             <div class="card-body">
-                <form>
+                <form action="{{ path('save') }}" method="post" enctype="multipart/form-data">
                     <div class="form-group">
                         <label>Pilsēta</label>
-                        <input type="text" class="form-control" id="city">
+                        <input type="text" class="form-control" id="city" name="city">
                     </div>
                     <div class="form-group">
                         <label>Rajons</label>
-                        <input type="text" class="form-control" id="city_area">
+                        <input type="text" class="form-control" id="city_area" name="city_area">
                     </div>
                     <div class="form-group">
                         <label>Iela</label>
-                        <input type="text" class="form-control" id="street">
+                        <input type="text" class="form-control" id="street" name="street">
                     </div>
                     <div class="form-group">
                         <label>Mājas numurs</label>
-                        <input type="number" class="form-control" id="street_number">
+                        <input type="number" class="form-control" id="street_number" name="street_number">
                     </div>
                     <div class="form-group">
                         <label>Google kartes īpašuma koordinātes</label>
-                        <input type="text" class="form-control" id="google_coordinates">
+                        <input type="text" class="form-control" id="google_coordinates" name="google_coordinates">
                     </div>
                     <div class="form-group">
                         <label>Īpašuma veids</label>
-                        <input type="text" class="form-control" id="property_type">
+                        <input type="text" class="form-control" id="property_type" name="property_type">
                     </div>
                     <div class="form-group">
                         <label>Cena</label>
-                        <input type="number" class="form-control" id="price">
+                        <input type="number" class="form-control" id="price" name="price">
                     </div>
                     <div class="form-group">
                         <label>Platība</label>
-                        <input type="number" class="form-control" id="area">
+                        <input type="number" class="form-control" id="area" name="area">
                     </div>
                     <div class="form-group">
                         <label>Istabu skaits</label>
-                        <input type="number" class="form-control" id="rooms">
+                        <input type="number" class="form-control" id="rooms" name="rooms">
                     </div>
                     <div class="form-group">
                         <label>Stāvs</label>
-                        <input type="number" class="form-control" id="floor">
+                        <input type="number" class="form-control" id="floor" name="floor">
                     </div>
                     <div class="form-group">
                         <label>Darijuma veids</label>
-                        <input type="text" class="form-control" id="deal_type">
+                        <input type="text" class="form-control" id="deal_type" name="deal_type">
                     </div>
                     <div class="form-group">
                         <label>Apraksts</label>
-                        <textarea class="form-control" id="description" rows="5"></textarea>
+                        <textarea class="form-control" id="description" rows="5" name="description"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Attēli</label>
-                        <input type="file" name="img" id="img" multiple>
+                        {#<input type="file"  id="images" name="images[]" multiple onchange="getFileSize()"/>#}
+                        <input type="file"  id="images" name="images[]" multiple/>
                     </div>
-                    <button class="btn btn-primary mb-2 submit">Pievienot īpašumu</button>
+                    <button type="submit" id="submit" name="submit" class="btn btn-primary mb-2">Pievienot īpašumu</button>
                 </form>
             </div>
         </div>
     </div>
 {% endblock %}
+{#{% block javascripts %}#}
+    {#<script>#}
+        {#function getFileSize() {#}
+            {#var fi = document.getElementById('images');#}
+
+            {#if (fi.files.length > 0) {#}
+                {#for (var i = 0; i <= fi.files.length - 1; i++) {#}
+
+                    {#var fsize = fi.files.item(i).size;#}
+                    {#if ( Math.round((fsize / 1024)) > 1) {#}
+                        {#alert('par lielu bilde');#}
+                    {#}#}
+                {#}#}
+            {#}#}
+        {#}#}
+    {#</script>#}
+{#{% endblock %}#}

@@ -1,0 +1,1273 @@
+body
+{
+  margin: 0px;
+  padding: 0px;
+}
+.debug
+{
+  background-color: #fff;
+}
+.clear
+{
+  clear: both;
+}
+
+div, p, td, a, section, article, header, footer, nav, input, textarea, select
+{
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #000;
+  box-sizing: border-box;
+  font-family: Raleway, sans-serif;
+}
+h1, h2, h3, h4, h5
+{
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: normal;
+  line-height: 1.2;
+  color: #000;
+  box-sizing: border-box;
+  padding: 0 0 10px 0;
+  margin: 0;
+}
+ol, ul, li
+{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+a
+{
+  text-decoration: none;
+  cursor: pointer;
+  outline : none;
+  color: #000;
+  font-size: 16px;
+}
+a:hover
+{
+  text-decoration: none;
+  color: #777;
+}
+img
+{
+  border: none;
+}
+table
+{
+  border-collapse: collapse;
+	border-spacing: 0;
+	empty-cells: show;
+}
+td
+{
+  padding: 5px;
+  vertical-align: top;
+}
+textarea:focus, input:focus
+{
+  outline: 0;
+}
+header, section, footer
+{
+  clear: both;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content
+{
+  padding: 0 20px;
+}
+section
+{
+}
+@media screen and (min-width: 1200px)
+{
+.content
+{
+  width: 1140px;
+  margin: 0 auto;
+  padding: 0;
+}
+}
+
+/* ******************************************** */
+header
+{
+  
+}
+header .ham
+{
+  float: left;
+  margin: 20px 0 0 20px;
+  color: #888;
+}
+header .logo
+{
+  display: block;
+  height: 51px;
+  width: 51px;
+  background: url('kartei.png') center center no-repeat;
+  margin: 20px auto;
+}
+header nav
+{
+  margin: 0 30px 30px 30px;
+  display: none;
+}
+header nav a
+{
+  display: block;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+  color: #000;
+}
+header nav a:hover
+{
+}
+section.main
+{
+  background: url('title.jpg') center top no-repeat;
+  height: 479px;
+  padding: 50px 30px 0 30px;
+  margin: 0 0 10px 0;
+  position: relative;
+  overflow: visible;
+}
+section.main .overlay
+{
+  opacity: 0.8;
+  background-image: linear-gradient(180deg, rgba(0,0,0,0.66) 0%, #000256 100%);
+  width: 100%;
+  height: 479px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+section.main-about
+{
+  background-image: url('about-head.jpg');
+}
+section.main-about .overlay
+{
+  background-image: linear-gradient(70deg, #0003ef 0%, #0c0001 94%);
+}
+section.main .shape
+{
+  transform: rotate(180deg);
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -1px;
+  fill: #fff;
+  z-index: 500;
+}
+section.main h1, section.main h2
+{
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  position: relative;
+  text-transform: none;
+  line-height: 2;
+}
+section.main h2
+{
+  font-size: 20px;
+}
+section.main-about h1
+{
+  padding: 50px 0 0 0;
+}
+
+section.main .main-menu
+{
+  margin: 30px 0 0 0;
+}
+section.main .main-menu div
+{
+  height: 70px;
+  width: 100%;
+  position: relative;
+  text-align: center;
+  display:inline-block;
+}
+section.main .main-menu div a
+{
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  padding: 10px 20px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  white-space: nowrap;
+  transition-duration: 0.5s;
+  margin: 0 30px;
+}
+section.main .main-menu div a:hover
+{
+  background-color: #2185f5;
+  border-color: #2185f5;
+}
+
+.start-filter
+{
+  position: absolute;
+  padding: 20px 0;
+  overflow: visible;
+}
+.start-filter h2, .start-filter p, .start-filter a
+{
+  color: #fff;
+}
+.start-filter h2
+{
+  text-align: center;
+}
+.start-filter .col
+{
+  float: left;
+  width: 50%;
+  color: #fff;
+}
+.start-filter .txt
+{
+  border: 0;
+  padding: 10px;
+  width: 40%;
+  height: 40px;
+}
+.start-filter .alt_txt
+{
+  width: 80%;
+}
+.start-filter .txt-full
+{
+  width: 90%;
+}
+.start-filter .btn
+{
+  cursor: pointer;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 20px;
+  white-space: nowrap;
+  transition-duration: 0.5s;
+  height: 40px;
+  background: transparent;
+}
+.start-filter .btn:hover
+{
+  background-color: #2185f5;
+  border-color: #2185f5;
+}
+
+section.pad
+{
+  height: 300px;
+}
+
+footer
+{
+  text-align: center;
+  padding: 5px 0;
+}
+
+@media screen and (min-width: 1200px)
+{
+header .ham
+{
+  display: none;
+}
+header .logo
+{
+  float: left;
+  margin: 10px 0 0 30px;
+}
+header nav
+{
+  display: block;
+  float: right;
+  padding: 20px 30px 0 30px;
+  margin: 0 30px 20px 30px;
+}
+header nav div
+{
+  float: left;
+  border-left: 1px solid #777;
+}
+header nav div:first-child
+{
+  border: 0;
+}
+header nav a 
+{
+  float: left;
+  padding: 15px 30px;
+  border: 2px solid #fff;
+}
+header nav a:hover, header nav a.sel
+{
+  border: 2px solid #000;
+  color: #000;
+}
+section.main
+{
+  padding: 70px 0 0 0;
+}
+section.main h1
+{
+  width: 1000px;
+  margin: 0 auto;
+}
+
+.start-filter
+{
+  padding: 30px 50px 30px 50px;
+  text-align: center;
+}
+.start-filter .form
+{
+  display:inline-block;
+}
+.start-filter h2
+{
+}
+.start-filter .col
+{
+  margin: 0 10px 0 0;
+  width: auto;
+  float: left;
+  text-align: left;
+}
+.start-filter .select
+{
+  width: 200px;
+}
+.start-filter .txt
+{
+  width: 150px;
+}
+.start-filter .txt-full
+{
+  width: 200px;
+}
+.start-filter .alt_txt
+{
+  width: 90%;
+}
+
+section.main-about
+{
+  
+}
+
+}
+
+
+/* ******************************************************* */
+/*
+
+*/
+.about-blocks
+{
+  position: relative;
+  margin-top: -150px;
+}
+.about-blocks .bl_
+{
+  margin: 0 50px 30px 50px;
+}
+.about-blocks .bl
+{
+  padding: 40px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  box-shadow: 0px 1px 2px #aaa;
+}
+.about-blocks .bl:hover
+{
+  transition-duration: 0.5s;
+  box-shadow: 0px 3px 15px #aaa;
+}
+.about-blocks .bl h2
+{
+  padding: 75px 0 40px 0;
+  background: url('ic-check1.png') center 20px no-repeat;
+  color: #3b5998;
+}
+.about-blocks .bl-2 h2
+{
+  background-image: url('ic-check2.png');
+  color: #55acee;
+}
+.about-graphs div
+{
+  margin: 0 50px 30px 50px;
+  padding: 20px;
+}
+.about-graphs div
+{
+  line-height: 1.5;
+}
+.about-graphs .img
+{
+  text-align: center;
+  margin: 10px;
+}
+.about-black
+{
+  background: url('unsplash1.jpg') no-repeat;
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+}
+.about-black .overlay
+{
+  background-color: #0003ef;
+  opacity: 0.7;
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+}
+.about-black .overlay2
+{
+  position: absolute;
+  width: 50%;
+  height: 1000px;
+  background-color: #000;
+}
+.about-black .overlay3
+{
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 1000px;
+  background-color: #000;
+}
+.about-black .content
+{
+  margin: 0 50px 30px 50px;
+  padding: 20px;
+  color: #fff;
+  position: relative;
+  
+}
+.about-black .img
+{
+  text-align: center;
+  margin: 10px;
+}
+.about-black h2
+{
+  color: #fff;
+  text-align: center;
+  color: #fff;
+}
+.about-black ul
+{
+  margin: 0 0 0 50px;
+}
+.about-black ul li
+{
+  list-style-type: disc;
+  padding: 0 0 10px 0;
+  color: #fff;
+  line-height: 1.8;
+}
+.about-black .gains h2
+{
+  margin: 120px 0 0 0;
+  background: url('ic-star.png') right center no-repeat;
+  min-height: 55px;
+  padding: 10px 55px;
+}
+
+
+@media screen and (min-width: 1200px)
+{
+.about-blocks
+{
+  width: 1100px;
+  margin: 0 auto;
+  margin-top: -150px;
+}
+.about-blocks .bl_
+{
+  margin: 0;
+  width: 33.33%;
+  float: left;
+}
+.about-blocks .bl
+{
+  margin: 10px;
+}
+
+.about-graphs
+{
+  width: 1100px;
+  margin: 40px auto;
+}
+.about-graphs div
+{
+  width: 33.33%;
+  margin: 0;
+  float: left;
+}
+.about-black2 .gain-text h2, .about-black2 .gain-text ul li
+{
+  color: #000;
+}
+.about-black .overlay3
+{
+  left: 40%;
+  width: 60%;
+  height: 1000px;
+  background-color: #fff;
+}
+.about-black .content
+{
+  margin: 0 auto 30px auto;
+}
+.about-black .content div
+{
+  width: 50%;
+  float: left;
+  padding: 50px;
+}
+.about-black2 .content div:first-child
+{
+  width: 35%;
+}
+.about-black2 .content div:last-child
+{
+  width: 65%;
+}
+.about-black2 .content div:last-child, .about-black2 .content div:last-child h2, .about-black2 .content div:last-child li
+{
+}
+
+}
+
+/* ************************************ */
+.contact-handle
+{
+  position: fixed;
+  z-index: 1000;
+  background-color: #286493;
+  color: #fff;
+  right: -51px;
+  top: 200px;
+  transform: rotate(-90deg);
+}
+.contact-handle a
+{
+  color: #fff;
+  display: block;
+  padding: 20px;
+  border: 1px solid #fff;
+}
+.contact-lay
+{
+  display: none;
+}
+.contact-lay .overlay
+{
+  background-color: #000;
+  opacity: 0.7;
+  position: absolute;
+  z-index: 1000;
+  width: 100%;
+  height: 100%;
+}
+.contact-lay .form
+{
+  background-color: #fff;
+  padding: 50px;
+  position: fixed;
+  z-index: 1000;
+  width: 500px;
+  height: 100%;
+  right: 0;
+}
+.contact-lay .form_
+{
+  width: 100%;
+  position: relative;
+}
+.contact-lay .back
+{
+  position: fixed;
+  width: 400px;
+  background-color: #eee;
+  border: 1px solid #000;
+  top: 50px;
+  bottom: 50px;
+}
+.contact-lay .back .part1
+{
+  position: fixed;
+  top: 60px;
+  bottom: 140px;
+  padding: 20px 0 20px 20px;
+  overflow: auto;
+  width: 390px;
+}
+.contact-lay .back .part1 div
+{
+  padding: 10px 0;
+}
+.contact-lay .back .part2
+{
+  position: fixed;
+  bottom: 0;
+  height: 130px;
+  padding: 0;
+  margin-left: 20px;
+}
+.contact-lay .button_
+{
+  background-color: #eee;
+  border: 1px solid #000;
+  height: 100%;
+  overflow-y: auto;
+}
+.contact-lay .form .close
+{
+  width: 45px;
+  height: 45px;
+  background: #aaa url('close.png') no-repeat;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.contact-lay .form .txt
+{
+  width: 350px;
+  padding: 10px;
+  border: 0;
+}
+.contact-lay .form .btn
+{
+  cursor: pointer;
+  padding: 15px 30px;
+  background-color: #286493;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+}
+.contact-links
+{
+  background-color: #dcdce2;
+  position: relative;
+}
+.contact-links .content > div
+{
+  margin: 30px 50px;
+  text-align: center;
+}
+.contact-links .content > div > div
+{
+  font-weight: bold;
+  font-size: 20px;
+  padding: 60px 0 0 0;
+}
+.contact-links .content > div > a
+{
+  font-weight: bold;
+  display: block;
+  font-size: 20px;
+  padding: 60px 0 0 0;
+}
+.contact-links .content .phone div
+{
+  background: url('ic-contact1.png') center top no-repeat;
+}
+.contact-links .content .mail div
+{
+  background: url('ic-contact2.png') center top no-repeat;
+}
+.contact-links .content .face a
+{
+  background: url('ic-contact3.png') center top no-repeat;
+}
+
+.contact-links .content > div > strong
+{
+  color: #777;
+  font-weight: normal;
+  font-size: 20px;
+}
+
+@media screen and (min-width: 1200px)
+{
+.contact-links 
+{
+  padding: 50px;
+}
+.contact-links .content
+{
+  width: 1400px;
+  margin: 0 auto;
+}
+.contact-links .content > div
+{
+  width: 33.33%;
+  float: left;
+  margin: 0;
+}
+}
+
+section.main-cat
+{
+  background: url('cat-head.png') center top no-repeat;
+  background-size: cover;
+  height: 120px
+}
+
+.catalog
+{
+  padding: 30px;
+}
+.catalog .form-block
+{
+  background-color: #1f3677;
+  padding: 20px;
+  margin: 0 0 20px 0;
+  width: 100%;
+  float: left;
+}
+.catalog .form-block h2, .catalog .form-block p, .catalog .form-block a
+{
+  color: #fff;
+}
+.catalog .form-block h2
+{
+  border-bottom: 1px solid #fff;
+  margin: 0 0 20px 0;
+}
+.catalog .form-block p
+{
+  margin: 0 0 20px 0;
+  display: block;
+  float: left;
+  width: 100%;
+}
+.catalog .form-block .txt
+{
+  border: 0;
+  padding: 10px;
+  width: 49%;
+}
+.catalog .form-block .alt_txt
+{
+  position: absolute;
+  width: 200px;
+}
+.catalog .form-block .txt-full
+{
+  width: 99%;
+}
+
+.select
+{
+  width: 99%;
+  height: 40px;
+  float: left;
+  overflow: visible;
+  background-color: #fff;
+  position: relative;
+}
+.select .first
+{
+  background: url('sel-arr.png') right center no-repeat;
+  height: 40px;
+  cursor: pointer;
+  width: 100%;
+}
+.select .list
+{
+  display: none;
+  width: 100%;
+  max-height: 150px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: 20000;
+  position: absolute;
+  background-color: #fff;
+  border: 1px solid #1e90ff;
+}
+.select .list a
+{
+  padding: 0 10px;
+  height: 20px;
+  display: block;
+  color: #000;
+  white-space: nowrap;
+}
+.select .list a:hover
+{
+  background-color: #1e90ff;
+  color: #fff;
+}
+
+
+.catalog .form-block .btn
+{
+  background-color: #000;
+  color: #fff;
+  border: 0;
+  padding: 10px;
+  width: 49%;
+  cursor: pointer;
+}
+.catalog .form-block p a
+{
+  text-decoration: underline;
+}
+.catalog .form-block p a:hover
+{
+  text-decoration: none;
+}
+.catalog .form-block p.buttons a
+{
+  display: block;
+  float: left;
+  border: 1px solid #fff;
+  padding: 15px 0;
+  margin: 0 0.5% 0 0;
+  width: 16%;
+  text-align: center;
+  text-decoration: none;
+}
+.catalog .form-block p.buttons a.sel
+{
+  background-color: #fff;
+  color: #286493;
+  font-weight: bold;
+}
+.catalog article
+{
+  float: left;
+  width: 100%;
+  position: relative;
+  margin: 0 0 20px 0;
+}
+.catalog article .img
+{
+  width: 100%;
+  height: 350px;
+  overflow: hidden;
+  text-align: center;
+}
+.catalog article .img img
+{
+  width: 100%;
+}
+.catalog article .tag
+{
+  display: block;
+  width: 100%;
+  height: 350px;
+  border-bottom: 5px solid #286493;
+  position: absolute;
+  top: 0;
+}
+.catalog article .tag:hover
+{
+  border-color: #3585c2;
+}
+.catalog article .tag:hover div
+{
+  background-color: #3585c2;
+}
+.catalog article .tag div
+{
+  background-color: #286493;
+  padding: 10px 30px;
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  font-size: 20px;
+}
+.catalog article .tag .price, .catalog article .tag:hover .price
+{
+  right: 0;
+  padding: 10px 15px;
+  background: transparent;
+  font-family: sans-serif;
+}
+.catalog article .info
+{
+  border: 1px solid #dcdce2;
+  border-top: 0;
+  float: left;
+  width: 100%;
+}
+.catalog article .street
+{
+  padding: 5px 10px 0 10px;
+  font-size: 20px;
+}
+.catalog article .city
+{
+  padding: 5px 10px 0 10px;
+  border-bottom: 1px solid #dcdce2;
+}
+.catalog article .data
+{
+  padding: 10px;
+  width: 50%;
+  float: left;
+}
+.catalog article .data-b
+{
+  border-left: 1px solid #dcdce2;
+  width: 49%;
+  text-align: right;
+}
+.pager
+{
+  position: relative;
+  text-align: center;
+  display:inline-block;
+  height: 50px;
+  padding: 20px 0;
+  margin: 30px 0 50px 0;
+}
+.pager a
+{
+  padding: 10px 15px;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+.pager a:hover
+{
+  color: #286493;
+  border-color: #286493;
+}
+.pager a.sel
+{
+  color: #fff;
+  background-color: #286493;
+}
+
+
+@media screen and (min-width: 600px)
+{
+section.main-cat
+{
+  height: 150px;
+}
+}
+@media screen and (min-width: 800px)
+{
+.catalog article
+{
+  width: 48%;
+  float: left;
+  margin-right: 2%;
+}
+.catalog article .img
+{
+  height: 300px;
+}
+.catalog article .tag
+{
+  height: 300px;
+}
+}
+@media screen and (min-width: 1200px)
+{
+section.main-cat
+{
+  height: 150px;
+}
+.catalog 
+{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+.catalog .form-block
+{
+  width: 290px;
+  margin: 0 10px 0 0;
+  height: 815px;
+}
+.catalog .form-block p
+{
+  margin: 0 0 30px 0;
+}
+.catalog .form-block p.buttons a
+{
+  width: 35px;
+  margin: 0 8px 0 0;
+  padding: 10px 0;
+}
+.catalog .form-block p.buttons a:last-child
+{
+  margin: 0;
+}
+.catalog article
+{
+  width: 290px;
+  height: 405px;
+  margin: 0 10px 5px 0;
+}
+.catalog article .img
+{
+  height: 290px;
+}
+.catalog article .tag
+{
+  height: 290px;
+}
+.catalog article .street
+{
+  height: 30px;
+  position: relative;
+  font-size: 20px;
+}
+.catalog article .city
+{
+  height: 30px;
+}
+.catalog article .data
+{
+  padding: 10px;
+  height: 55px;
+}
+
+
+}
+
+/* ****************************** */
+
+.estate
+{
+  padding: 30px;
+}
+.estate h1
+{
+  font-weight: bold;
+}
+.estate h3
+{
+  font-size: 22px;
+  margin: 15px 0 0 0;
+}
+.estate p
+{
+  padding: 0 0 10px 0;
+}
+.show-window .link
+{
+  clear: both;
+  padding: 20px 0 10px 0;
+  text-align: center;
+}
+.show-window .link a
+{
+  display: inline-block;
+  border: 2px solid #000;
+  padding: 20px;
+}
+
+@media screen and (min-width: 1200px)
+{
+.estate
+{
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+.estate .img_block
+{
+  float: left;
+  width: 560px;
+  padding: 0 0 50px 0;
+}
+.estate .img_block a
+{
+  float: left;
+  margin: 10px;
+}
+.estate .info_block
+{
+  float: left;
+  width: 640px;
+  padding: 20px 20px 50px 20px;
+}
+.show-window
+{
+  width: 900px;
+  padding: 50px 0;
+}
+.show-window article
+{
+  height: auto;
+}
+}
+
+/* ********************************************** */
+section.main-contacts
+{
+  height: 200px;
+}
+.contact-section
+{
+  padding: 30px;
+}
+.contact-section .col
+{
+  padding: 150px 30px 30px 30px;
+}
+.contact-section .col:first-child
+{
+  background: url('ic-sect1.png') center 20px no-repeat;
+}
+.contact-section .col:last-child
+{
+  background: url('ic-sect1.png') center 20px no-repeat;
+}
+.contact-section h2
+{
+  text-align: center;
+}
+.contact-section p
+{
+  text-align: center;
+  font-size: 20px;
+  padding: 10px;
+}
+.contact-section p strong
+{
+  text-align: center;
+}
+
+.map
+{
+  width: 100%;
+  float: left;
+}
+.map iframe
+{
+  width: 100%;
+  height: 235px;
+}
+
+.contact-form
+{
+  padding: 30px;
+}
+
+.contact-form .form
+{
+  background-color: #eee;
+  border: 1px solid #000;
+  height: 100%;
+  padding: 20px;
+}
+.contact-form .form div
+{
+  padding: 10px;
+}
+.contact-form .form .txt
+{
+  width: 100%;
+  padding: 10px;
+  border: 0;
+}
+.contact-form .form .btn
+{
+  cursor: pointer;
+  padding: 15px 30px;
+  background-color: #286493;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+}
+section.main-contacts
+{
+  height: 250px;
+  padding: 50px 30px 0 30px;
+  margin: 0 0 50px 0;
+}
+section.main-contacts .overlay
+{
+  height: 250px;
+}
+
+@media screen and (min-width: 1200px)
+{
+section.main-contacts h2
+{
+  float: left;
+}
+
+section.main-contacts .main-menu
+{
+  float: right;
+  margin: 10px 0 0 0;
+}
+section.main-contacts .content
+{
+  width: 1200px;
+  margin: 20px auto 0 auto;
+  position: relative;
+}
+
+.contact-section 
+{
+  padding: 0;
+  width: 1200px;
+  margin: 0 auto;
+}
+.contact-section .col
+{
+  float: left;
+  width: 50%;
+  padding: 200px 0 100px 0;
+}
+.contact-section .col:first-child
+{
+  border-right: 1px solid #eee;
+}
+.contact-form
+{
+  padding: 0;
+  width: 1000px;
+  margin: 0 auto 50px auto;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
