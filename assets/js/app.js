@@ -31,7 +31,7 @@ $().ready(function () {
         rules: {
             image: {
                 required: true,
-                extension: "jpg,jpeg,png",
+                extension:  "png|jpeg|jpg",
                 filesize: 1,
             }
         }

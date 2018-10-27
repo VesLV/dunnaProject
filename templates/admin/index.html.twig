@@ -8,7 +8,7 @@
                 <h1>Jauns īpašums</h1>
             </div>
             <div class="card-body">
-                <form action="{{ path('save') }}" method="post" enctype="multipart/form-data" id="new_estate">
+                <form action="{{ path('save') }}" method="post" enctype="multipart/form-data" id="new_estate" novalidate>
                     <div class="form-group">
                         <label>Pilsēta</label>
                         <input type="text" class="form-control" id="city" name="city">
@@ -23,7 +23,7 @@
                     </div>
                     <div class="form-group">
                         <label>Mājas numurs</label>
-                        <input type="number" class="form-control" id="street_number" name="street_number">
+                        <input type="text" class="form-control" id="street_number" name="street_number">
                     </div>
                     <div class="form-group">
                         <label>Google kartes īpašuma koordinātes</label>
@@ -35,19 +35,19 @@
                     </div>
                     <div class="form-group">
                         <label>Cena</label>
-                        <input type="number" class="form-control" id="price" name="price">
+                        <input type="text" class="form-control" id="price" name="price">
                     </div>
                     <div class="form-group">
                         <label>Platība</label>
-                        <input type="number" class="form-control" id="area" name="area">
+                        <input type="text" class="form-control" id="area" name="area">
                     </div>
                     <div class="form-group">
                         <label>Istabu skaits</label>
-                        <input type="number" class="form-control" id="rooms" name="rooms">
+                        <input type="text" class="form-control" id="rooms" name="rooms">
                     </div>
                     <div class="form-group">
                         <label>Stāvs</label>
-                        <input type="number" class="form-control" id="floor" name="floor">
+                        <input type="text" class="form-control" id="floor" name="floor">
                     </div>
                     <div class="form-group">
                         <label>Darijuma veids</label>
@@ -68,20 +68,3 @@
         </div>
     </div>
 {% endblock %}
-{#{% block javascripts %}#}
-    {#<script>#}
-        {#function getFileSize() {#}
-            {#var fi = document.getElementById('images');#}
-
-            {#if (fi.files.length > 0) {#}
-                {#for (var i = 0; i <= fi.files.length - 1; i++) {#}
-
-                    {#var fsize = fi.files.item(i).size;#}
-                    {#if ( Math.round((fsize / 1024)) > 1) {#}
-                        {#alert('par lielu bilde');#}
-                    {#}#}
-                {#}#}
-            {#}#}
-        {#}#}
-    {#</script>#}
-{#{% endblock %}#}

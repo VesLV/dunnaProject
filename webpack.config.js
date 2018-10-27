@@ -8,7 +8,6 @@ Encore
     .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
-    .autoProvidejQuery()
 
     .addPlugin(new CopyWebpackPlugin([
         { from: './assets/images', to: 'images' }
@@ -47,7 +46,7 @@ Encore
     //.enableTypeScriptLoader()
 
     // uncomment if you're having problems with a jQuery plugin
-    //.autoProvidejQuery()
+    .autoProvidejQuery()
 ;
 
 module.exports = Encore.getWebpackConfig();
