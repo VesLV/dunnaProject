@@ -8,7 +8,7 @@
                 <h1>Jauns īpašums</h1>
             </div>
             <div class="card-body">
-                <form action="{{ path('save') }}" method="post" enctype="multipart/form-data">
+                <form action="{{ path('save') }}" method="post" enctype="multipart/form-data" id="new_estate">
                     <div class="form-group">
                         <label>Pilsēta</label>
                         <input type="text" class="form-control" id="city" name="city">
@@ -60,7 +60,7 @@
                     <div class="form-group">
                         <label>Attēli</label>
                         {#<input type="file"  id="images" name="images[]" multiple onchange="getFileSize()"/>#}
-                        <input type="file"  id="images" name="images[]" multiple/>
+                        <input type="file"  id="image" name="image"/>
                     </div>
                     <button type="submit" id="submit" name="submit" class="btn btn-primary mb-2">Pievienot īpašumu</button>
                 </form>
