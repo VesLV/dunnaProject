@@ -21,19 +21,19 @@ require('bootstrap-slider');
 global.$ = global.jQuery = $;
 
 
+$.validator.addMethod('filesize', function (value, element, param) {
+    return this.optional(element) || (element.files[0].size <= param)
+}, 'File size must be less than {0}');
 
-$().ready(function () {
-    $.validator.addMethod('filesize', function (value, element, param) {
-        return this.optional(element) || (element.files[0].size <= param)
-    }, 'File size must be less than {0}');
-
-    $('#new_estate').validate({
+jQuery(function ($) {
+    "use strict";
+    $('#update_profile').validate({
         rules: {
-            image: {
+            "image[]": {
                 required: true,
-                extension:  "png|jpeg|jpg",
-                filesize: 1,
+                extension: "jpg,jpeg,png",
+                filesize: 9999999999,
             }
-        }
+        },
     });
 });
