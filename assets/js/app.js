@@ -10,7 +10,8 @@ require('../css/app.css');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 const $ = require('jquery');
-require('jquery-validation');
+require('jquery-validation/dist/additional-methods');
+require('jquery-validation/dist/additional-methods.min');
 // console.log('Hello Webpack Encore! Edit me in assets/js/app.js');
 
 // JS is equivalent to the normal "bootstrap" package
@@ -20,19 +21,22 @@ require('bootstrap-slider');
 
 global.$ = global.jQuery = $;
 
+$(function () {
+    $.validator.addMethod('filesize', function (value, element, param) {
+        return this.optional(element) || (element.files[0].size <= param)
+    }, 'Tai bildei ir janomet svars tapat kā tev, ieliec mazāku par: {0}');
 
-$.validator.addMethod('filesize', function (value, element, param) {
-    return this.optional(element) || (element.files[0].size <= param)
-}, 'File size must be less than {0}');
-
-jQuery(function ($) {
-    "use strict";
-    $('#update_profile').validate({
+    $('#new_estate').validate({
         rules: {
-            "image[]": {
+            "images[]": {
                 required: true,
-                extension: "jpg,jpeg,png",
-                filesize: 9999999999,
+                extension: 'jpeg|jpg',
+                filesize: 24368,
+            },
+        },
+        messages:{
+            "images[]": {
+                extension: "Samaini formātu aita! Pienemu tikai jpeg,jpg,png.",
             }
         },
     });

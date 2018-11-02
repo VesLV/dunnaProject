@@ -35,6 +35,8 @@ class AdminController extends AbstractController
      */
     public function saveNewEstate(Request $request)
     {
+        dump($request->files->get('images'));
+        exit();
         $estates = new DunnaEstates();
 
         $propertyDetails = [
