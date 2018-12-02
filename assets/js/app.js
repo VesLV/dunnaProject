@@ -6,7 +6,8 @@
  */
 
 // any CSS you require will output into a single css file (app.css in this case)
-require('../css/app.css');
+// require('../css/app.css');
+require('../scss/app.scss');
 
 // Need jQuery? Install it with "yarn add jquery", then uncomment to require it.
 const $ = require('jquery');
@@ -17,7 +18,10 @@ require('jquery-validation/dist/additional-methods.min');
 // JS is equivalent to the normal "bootstrap" package
 // no need to set this to a variable, just require it
 require('bootstrap');
-require('bootstrap-slider');
+
+//range slider
+require('bootstrap-slider/dist/bootstrap-slider.min');
+require('bootstrap-slider/dist/css/bootstrap-slider.min.css');
 
 global.$ = global.jQuery = $;
 
@@ -33,11 +37,19 @@ $(function () {
                 extension: 'jpeg|jpg',
                 filesize: 24368,
             },
+
         },
         messages:{
             "images[]": {
                 extension: "Samaini formātu aita! Pienemu tikai jpeg,jpg,png.",
             }
         },
+    });
+});
+$(function () {
+    $("#ex2").slider({
+        formatter: function (value) {
+            return 'Istabu skaits' + value;
+        }
     });
 });

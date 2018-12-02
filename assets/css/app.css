@@ -200,3 +200,7 @@ body {
 {
     background: #3f6fce;
 }
+
+.bg-violet {
+    background-color: rgba(51,51,103,0.77)
+}
